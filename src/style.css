@@ -92,6 +92,10 @@ a.navbar-brand {
     color: var(--primary-color);
 }
 
+.nav-link {
+    padding: 0px;
+}
+
 .nav-link, p.button {
     font-family: var(--font-secondary);
     font-size: 14px;
