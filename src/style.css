@@ -72,7 +72,7 @@ h1.first-line {
 }
 
 .scroll-down {
-    margin-bottom: 56px;
+    margin-bottom: 32px;
 }
  
 .contact {
@@ -121,7 +121,7 @@ a.navbar-brand {
 
 .navbar-nav {
     padding: 0px;
-    gap: 56px;
+    gap: 32px;
 }
 
 @media (min-width: 992px) {
