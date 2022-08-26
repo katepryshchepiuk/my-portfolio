@@ -210,7 +210,7 @@ a.navbar-brand:hover {
 }
 
 #my-photo {
-    height: 442px;
+    height: 380px;
     width: 100%;
     border-radius: var(--border-radius);
     object-fit: cover;
