@@ -6,6 +6,7 @@
     --border-radius: 16px;
     --container-color: rgba(242, 242, 242, 1);
     --secondary-color-pink: #FFE9F3;
+    --secondary-color-blue: #D8D4F2;
     --dark-color: #292E33;
     --white-color: #ffffff;
     --padding-section-desktop: 112px 40px;
@@ -13,7 +14,11 @@
 }
 
 body {
-    background-color: var(--container-color);
+    background-color: var(--white-color);
+}
+
+.container-custom {
+    padding: 80px 20px;
 }
 
 h1, h2, h3 {
@@ -63,6 +68,11 @@ p {
     font-weight: 500;
 }
 
+.material-symbols-outlined {
+    position: relative;
+    top: 6px;
+}
+
 i.material-symbols-outlined {
     font-size: 16px;
     font-weight: 600;
@@ -79,12 +89,46 @@ i.waving_hand {
     top: 4px;
 }
 
+img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+    transition: all 0.2s ease-in;
+}
+
+.container-hero {
+    padding: 20px;
+}
+
+.container-skills {
+    padding: 112px 56px;
+}
+
 #hero {
     background-color: var(--secondary-color-green);
     border-radius: var(--border-radius);
     padding: 20px 40px;
+    height: 100%;
+}
+
+#hero-section {
+    height: 100vh;
+}
+
+#hero-projects {
+    background-color: var(--secondary-color-green);
+    border-radius: var(--border-radius);
+    padding: 20px 40px;
     margin: 20px;
-    height: 94vh;
+}
+
+#nav {
+    padding: 20px 40px;
+    margin: 20px;
 }
 
 .link {
@@ -95,7 +139,7 @@ i.waving_hand {
     text-transform: uppercase;
     color: var(--primary-color);
     text-decoration: none;
-    transition: ease-in 0.2s all;
+    transition: all 0.2s ease-in;
 }
 
 .link:hover {
@@ -111,6 +155,7 @@ i.waving_hand {
     text-transform: uppercase;
     text-decoration: none;
     color: gray;
+    transition: all 0.2s ease-in;
 }
 
 .link-disabled:hover {
@@ -122,7 +167,7 @@ i.waving_hand {
     border: 1px solid var(--primary-color);
     border-radius: 50px;
     padding: 8px 20px;
-    transition: 0.3s all;
+    transition: all 0.2s ease-in;
 }
 
 .btn-contact:hover {
@@ -186,17 +231,13 @@ a.navbar-brand:hover {
 }
 
 #about-section {
-    padding: var(--padding-section-desktop);
-    margin: 20px;
+    gap: 56px;
     background: white;
     border-radius: var(--border-radius);
 }
 
 #about-div {
-    padding: 0px;
-    gap: 24px;
     border: none;
-    max-width: 1200px;
 }
 
 #about-text {
@@ -210,7 +251,7 @@ a.navbar-brand:hover {
 }
 
 #my-photo {
-    height: 380px;
+    height: 400px;
     width: 100%;
     border-radius: var(--border-radius);
     object-fit: cover;
@@ -275,9 +316,25 @@ a.navbar-brand:hover {
     color: var(--secondary-color-green);
 }
 
+.skills {
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color-blue);
+    gap: 40px;
+}
+
+.card-1-3 {
+    width: 30%;
+}
+
+.text {
+    padding-right: 16px;
+}
+
+#skills-cards {
+    gap: 32px;
+}
+
 #projects-section {
-    padding: var(--padding-section-desktop);
-    margin: 20px;
     background: var(--white-color);
     border-radius: var(--border-radius);
 }
@@ -305,7 +362,7 @@ a.navbar-brand:hover {
 }
 
 #project-photo {
-    height: 733px;
+    height: 450px;
     object-fit: cover;
     border-radius: var(--border-radius);
 
@@ -317,7 +374,7 @@ a.navbar-brand:hover {
 
 .chip {
     padding: 8px 12px;
-    background-color: var(--secondary-color-green);
+    background-color: var(--secondary-color-blue);
     border-radius: 50px;
 }
 
@@ -332,12 +389,10 @@ a.navbar-brand:hover {
 }
 
 #footer {
-    padding: 112px 40px 32px;
-    margin: 20px;
-    gap: 108px;
+    padding: 112px 56px 32px;
     background: var(--primary-color);
     border-radius: var(--border-radius);
-    gap: 64px;
+    gap: 56px;
 }
 
 #footer-content {
@@ -360,19 +415,21 @@ a.navbar-brand:hover {
     text-transform: uppercase;
     color: var(--primary-color);
     text-decoration: none;
-    transition: ease-in 0.2s all;
+    transition: all 0.2s ease-in;
 }
 
 #email-link:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color-pink);
     font-style: italic;
+    font-weight: 500;
 }
 
 #footer-text {
     color: var(--secondary-color-green);
     text-align: center;
     font-weight: 400;
+    padding: 0px 32px;
 }
 
 #email-div {
@@ -438,12 +495,25 @@ a.navbar-brand:hover {
     border: none;
 }
 
+.coloured-background {
+    color: var(--dark-color);
+    font-weight: 700;
+}
+
+.link-disabled-nav {
+    opacity: 60%;
+}
+
 @media (min-width: 992px) {
     .collapse {
         display: flex;
         flex-direction: row;
         justify-content: end;
         align-items: center;
+    }
+
+    .header {
+        padding: 0px 220px;
     }
 }
 
@@ -467,7 +537,7 @@ a.navbar-brand:hover {
     .navbar-collapse {
         position: absolute;
         left: 0;
-        top: 100%;
+        top: 90%;
         width: 100%;
         height: 84vh;
         z-index: 100;
@@ -479,19 +549,29 @@ a.navbar-brand:hover {
         margin-top: 168px;
     }
 
+    .container-custom {
+        padding: 32px 16px;
+    }
+
+    .container-hero {
+        padding: 16px;
+    }
+
+    .container-skills {
+        padding: 56px 32px;
+    }
+
     #hero {
-        margin: 10px;
-        padding: 10px 20px;;
+        padding: 16px;
+        height: 95vh;
     }
 
-    #about-section {
-        padding: 20px 20px 40px;
-        margin: 10px;
+    #about-div {
+        gap: 16px;
     }
 
-    #projects-section {
-        padding: 40px 20px 8px;
-        margin: 10px;
+    #about-me-text {
+        gap: 16px;
     }
 
     #my-photo {
@@ -514,13 +594,37 @@ a.navbar-brand:hover {
         height: 365px;
     }
 
+    #section-skills {
+        gap: 40px;
+    }
+
     #footer {
-        padding: 40px 20px 32px;
+        padding: 56px 16px 32px;
+        gap: 24px;
+    }
+
+    #email-div {
         gap: 32px;
-        margin: 10px;
+    }
+
+    #footer-content {
+        gap: 56px;
     }
 
     #projects-div {
         gap: 16px;
+    }
+
+    #nav {
+        padding: 10px;
+    }
+
+    .card-1-3 {
+        width: auto;
+        padding: 0px;
+    }
+
+    .text {
+        padding: 0px;
     }
 }
