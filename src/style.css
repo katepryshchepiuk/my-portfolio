@@ -17,10 +17,6 @@ body {
     background-color: var(--white-color);
 }
 
-.container-custom {
-    padding: 80px 20px;
-}
-
 h1, h2, h3 {
     font-family: var(--font-general);
     font-weight: 500;
@@ -106,6 +102,10 @@ img:hover {
 
 .container-skills {
     padding: 112px 56px;
+}
+
+.container-custom {
+    padding: 80px 20px;
 }
 
 #hero {
